@@ -26,20 +26,20 @@ You can visit http://35.157.59.198/
 
 ## Secure the server
 
-### Step 3: Update all currently installed packages
+###  Update all currently installed packages
 
 ```
 sudo apt-get update
 ```
 
-### Step 4: Change the SSH port from 22 to 2200
+###  Change the SSH port from 22 to 2200
 
 - Edit the `/etc/ssh/sshd_config` file: `sudo nano /etc/ssh/sshd_config`.
 - Change the port number from `22` to `2200`.
 - Save and exit using CTRL+X and confirm with Y.
 - Restart SSH: `sudo service ssh restart`.
 
-## Step 5: Configure the Uncomplicated Firewall (UFW)
+##  Configure the Uncomplicated Firewall (UFW)
 
 - Check firewall status: `$ sudo ufw status`
 - Set default firewall to deny all incomings: `$ sudo ufw default deny incoming`
@@ -69,7 +69,7 @@ sudo apt-get update
   - Restart SSH: `sudo service ssh restart`
   
 
-### Step 9: Configure the local timezone to UTC
+###  Configure the local timezone to UTC
 
 - Run `$ sudo dpkg-reconfigure tzdata`.
 

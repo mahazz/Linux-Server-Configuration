@@ -7,20 +7,20 @@ You will learn in this project how to access, secure, and perform the initial co
 You can visit http://35.157.59.198/ 
 
 ## Start a new Ubuntu Linux Server instance on Amazon Lightsail
-1. Create an AWS account
-2. Click **Create instance** button on the home page
-3. Select **Linux/Unix** platform
-4. Select **OS Only** and **Ubuntu**
-5. Select an instance plan
-6. Name your instance
-7. Click **Create** button
+- Create an AWS account
+- Click **Create instance** button on the home page
+- Select **Linux/Unix** platform
+- Select **OS Only** and **Ubuntu**
+- Select an instance plan
+- Name your instance
+- Click **Create** button
 
 ## SSH into your Server
-1. Click on `SSH keys` tab From the `Account page`on Amazon Lightsail and download the Private Key.
-2. Create a new file named **lightsail_key.rsa** under ~/.ssh folder on your local machine
-3. Copy and paste content from downloaded private key file to **lightsail_key.rsa**
-4. In your terminal, type: `chmod 600 ~/.ssh/lightsail_key.rsa`.
-5. SSH into the instance: `$ ssh -i ~/.ssh/lightsail_key.rsa ubuntu@35.157.59.198`
+- Click on `SSH keys` tab From the `Account page`on Amazon Lightsail and download the Private Key.
+- Create a new file named **lightsail_key.rsa** under ~/.ssh folder on your local machine
+- Copy and paste content from downloaded private key file to **lightsail_key.rsa**
+- In your terminal, type: `chmod 600 ~/.ssh/lightsail_key.rsa`.
+- SSH into the instance: `$ ssh -i ~/.ssh/lightsail_key.rsa ubuntu@35.157.59.198`
 
 * Public IP address: 35.157.59.198
 

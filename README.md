@@ -107,7 +107,14 @@ sudo apt-get update
   postgres=# CREATE ROLE catalog WITH PASSWORD 'catalog';
   postgres=# ALTER ROLE catalog CREATEDB;
   ```
-
+- List the existing roles: `\du`:
+  ```
+                                     List of roles
+   Role name |                         Attributes                         | Member of 
+  -----------+------------------------------------------------------------+-----------
+   catalog   | Create DB                                                  | {}
+   postgres  | Superuser, Create role, Create DB, Replication, Bypass RLS | {}
+  ```
 ## Install git
 install `git`by run `sudo apt-get install git`.
 

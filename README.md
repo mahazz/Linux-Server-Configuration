@@ -54,6 +54,20 @@ sudo apt-get update
 ## Create a new user account **grader** and give **grader** sudo access
 - Create a new user account **grader**:`$ sudo adduser grader` 
 - Enter a password and fill out information for this new user.
+- Add privileges to `grader` user by run `sudo visudo` and adding grader under root:
+  ```
+  root    ALL=(ALL:ALL) ALL
+  grader  ALL=(ALL:ALL) ALL
+  ```
+- To verify `grader` has sudo permissions. Run `su - grader`and run `sudo -l`. The output should be display like this:
+ ```
+  Matching Defaults entries for grader on ip-172-26-13-223.eu-central-1.compute.internal:
+      env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
+  
+  User grader may run the following commands on ip-172-26-13-223.eu-central-1.compute.internal:
+      (ALL : ALL) ALL
+      (ALL : ALL) ALL
+  ```
 
 ## Set SSH login using keys
 1- On the local machine:
@@ -75,7 +89,7 @@ sudo apt-get update
 
 ## Install and configure Apache
 - Install **Apache**: `$ sudo apt-get install apache2`
-- Go to http://35.157.59.198, if Apache is working correctly, a **Apache2 Ubuntu Default Page** will show up
+- Go to http://35.157.59.198, if Apache is working correctly, a **Apache2 Ubuntu Default Page** will show Apache welcome page.
 
 ## Install and configure Python mod_wsgi
 - Install the **mod_wsgi** package: `$ sudo apt-get install libapache2-mod-wsgi-py3`
@@ -85,7 +99,14 @@ sudo apt-get update
 
 ## Install PostgreSQL
 - Run `$ sudo apt-get install postgresql`
-- Do not allow remote connections.
+- Make sure does not allow remote connections.
+- Switch to the `postgres` user by run `sudo su - postgres`.
+- Open PostgreSQL with `psql`.
+- Create the `catalog` user with login role and allow user to create database table: :
+  ```
+  postgres=# CREATE ROLE catalog WITH PASSWORD 'catalog';
+  postgres=# ALTER ROLE catalog CREATEDB;
+  ```
 
 ## Install git
 install `git`by run `sudo apt-get install git`.

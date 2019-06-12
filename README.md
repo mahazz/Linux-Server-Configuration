@@ -17,10 +17,31 @@ You can visit http://35.157.59.198/
 
 ## SSH into your Server
 - Click on `SSH keys` tab From the `Account page`on Amazon Lightsail and download the Private Key.
-- Create a new file named **lightsail_key.rsa** under ~/.ssh folder on your local machine
-- Copy and paste content from downloaded private key file to **lightsail_key.rsa**
+- Create a new file named **lightsailkey.rsa** under ~/.ssh folder on your local machine
+- Copy and paste content from downloaded private key file to **lightsailkey.rsa**
 - In your terminal, type: `chmod 600 ~/.ssh/lightsail_key.rsa`.
 - SSH into the instance: `$ ssh -i ~/.ssh/lightsail_key.rsa ubuntu@35.157.59.198`
+
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/ubuntu/.ssh/id_rsa):
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /home/ubuntu/.ssh/id_rsa.
+Your public key has been saved in /home/ubuntu/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:bDL8/xlNKD43TuqYnOuuB1fysEbdhOZNi3l9/ihRtCI ubuntu@ip-172-26-13-223
+The key's randomart image is:
++---[RSA 2048]----+
+|           .     |
+|          o o .  |
+|         + B + . |
+|     . .+ E *.+ .|
+|      +.S*.o.o.o |
+|      .=+....o  .|
+|       +. o =....|
+|       ..= *.+. .|
+|      .=Oo+.+.   |
++----[SHA256]-----+
 
 * Public IP address: 35.157.59.198
 

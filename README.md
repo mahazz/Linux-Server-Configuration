@@ -17,10 +17,10 @@ You can visit http://35.157.59.198/
 
 ## SSH into your Server
 - Click on `SSH keys` tab From the `Account page`on Amazon Lightsail and download the Private Key.
-- Create a new file named **lightsailkey.rsa** under ~/.ssh folder on your local machine
-- Copy and paste content from downloaded private key file to **lightsailkey.rsa**
+- Create a new file named **authorized_keys** under ~/.ssh folder on your local machine
+- Copy and paste content from downloaded private key file to **authorized_keys**
 - In your terminal, type: `chmod 600 ~/.ssh/lightsail_key.rsa`.
-- SSH into the instance: `$ ssh -i ~/.ssh/lightsail_key.rsa ubuntu@35.157.59.198`
+
 
 Generating public/private rsa key pair.
 Enter file in which to save the key (/home/ubuntu/.ssh/id_rsa):
@@ -94,9 +94,9 @@ sudo apt-get update
 1- On the local machine:
   - Run `ssh-keygen`
   - Enter file in the local directory `~/.ssh`
-  - Enter in a passphrase twice. Two files will be generated (  `~/.ssh/grader_key` and `~/.ssh/grader_key.pub`)
-  - Run `cat ~/.ssh/grader_key.pub` and copy the contents of the file
-  - Log in to the grader virtual machine and the password is (Maha#123)
+  - Enter in a passphrase twice. Two files will be generated (  `~/.ssh/id_rsa.pub`).
+  - Run `cat ~/.ssh/id_rsa.pub` and copy the contents of the file. 
+  - Log in to the grader virtual machine and the password is (Maha#123).
 - On the grader's virtual machine:
   - Create a new directory called `~/.ssh` (`mkdir .ssh`)
   - Run `sudo nano ~/.ssh/authorized_keys` and paste the content into this file, save and exit

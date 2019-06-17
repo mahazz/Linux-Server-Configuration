@@ -19,7 +19,7 @@ You can visit http://35.157.59.198/
 - Click on `SSH keys` tab From the `Account page`on Amazon Lightsail and download the Private Key.
 - Create a new file named **authorized_keys** under ~/.ssh folder on your local machine
 - Copy and paste content from downloaded private key file to **authorized_keys**
-- In your terminal, type: `chmod 600 ~/.ssh/lightsail_key.rsa`.
+- In your terminal, type: `chmod 600 ~/.ssh/authorized_keys`.
 
 
 Generating public/private rsa key pair.
@@ -140,7 +140,7 @@ sudo apt-get update
 install `git`by run `sudo apt-get install git`.
 
 ## Clone and setup the Item Catalog project from the GitHub repository
-- Create dictionary: `$ mkdir /var/www/catalog`
-- CD to this directory: `$ cd /var/www/catalog`
-- Clone the catalog app: `$  git clone https://github.com/mahazz/item-catalog.git catalog`
+- Create dictionary: `$ mkdir /var/www/html/item-catalog `
+- CD to this directory: `$ cd /var/www/html/item-catalog `
+- Clone the catalog app: `$  git clone https://github.com/mahazz/item-catalog.git`
 - Change the ownership: `$ sudo chown -R ubuntu:ubuntu catalog/`

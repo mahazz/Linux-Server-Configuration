@@ -4,7 +4,7 @@ This is the final project for Udacity Full Stack Web Developer Nanodegree.
 You will take a baseline installation of a Linux server and prepare it to host your web applications. You will secure your server from a number of attack vectors, install and configure a database server, and deploy one of your existing web applications onto it.
 You will learn in this project how to access, secure, and perform the initial configuration of a bare-bones Linux server. You will then learn how to install and configure a web and database server and actually host a web application.
 
-You can visit http://35.157.59.198/ 
+You can visit http://18.197.195.222/ 
 
 ## Start a new Ubuntu Linux Server instance on Amazon Lightsail
 - Create an AWS account
@@ -22,28 +22,7 @@ You can visit http://35.157.59.198/
 - In your terminal, type: `chmod 600 ~/.ssh/authorized_keys`.
 
 
-Generating public/private rsa key pair.
-Enter file in which to save the key (/home/ubuntu/.ssh/id_rsa):
-Enter passphrase (empty for no passphrase):
-Enter same passphrase again:
-Your identification has been saved in /home/ubuntu/.ssh/id_rsa.
-Your public key has been saved in /home/ubuntu/.ssh/id_rsa.pub.
-The key fingerprint is:
-SHA256:bDL8/xlNKD43TuqYnOuuB1fysEbdhOZNi3l9/ihRtCI ubuntu@ip-172-26-13-223
-The key's randomart image is:
-+---[RSA 2048]----+
-|           .     |
-|          o o .  |
-|         + B + . |
-|     . .+ E *.+ .|
-|      +.S*.o.o.o |
-|      .=+....o  .|
-|       +. o =....|
-|       ..= *.+. .|
-|      .=Oo+.+.   |
-+----[SHA256]-----+
-
-* Public IP address: 35.157.59.198
+* Public IP address: 18.197.195.222
 
 ## Secure the server
 
@@ -82,10 +61,10 @@ sudo apt-get update
   ```
 - To verify `grader` has sudo permissions. Run `su - grader`and run `sudo -l`. The output should be display like this:
  ```
-  Matching Defaults entries for grader on ip-172-26-13-223.eu-central-1.compute.internal:
+  Matching Defaults entries for grader on ip-172-26-8-215.eu-central-1.compute.internal:
       env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
   
-  User grader may run the following commands on ip-172-26-13-223.eu-central-1.compute.internal:
+  User grader may run the following commands on ip-172-26-8-215.eu-central-1.compute.internal:
       (ALL : ALL) ALL
       (ALL : ALL) ALL
   ```
@@ -110,7 +89,7 @@ sudo apt-get update
 
 ## Install and configure Apache
 - Install **Apache**: `$ sudo apt-get install apache2`
-- Go to http://35.157.59.198, if Apache is working correctly, a **Apache2 Ubuntu Default Page** will show Apache welcome page.
+- Go to http://18.197.195.222, if Apache is working correctly, a **Apache2 Ubuntu Default Page** will show Apache welcome page.
 
 ## Install and configure Python mod_wsgi
 - Install the **mod_wsgi** package: `$ sudo apt-get install libapache2-mod-wsgi-py3`
